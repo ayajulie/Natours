@@ -27,51 +27,46 @@ body {
   /* whatever the vp size the image stays on top of the container*/
   position: relative;
   /*to make the logo-box  position according to the header*/ }
-
-.header__logo-box {
-  position: absolute;
-  top: 5.5rem;
-  left: 5rem; }
-
-.header__logo {
-  height: 3.5rem;
-  backface-visibility: hidden;
-  animation: moveInTop 1s ease-out; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* it's shiffted from it's own initial position*/
-  text-align: center;
-  /*to align text like the button which is a inline-block*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 5.5rem;
+    left: 5rem; }
+  .header__logo {
+    height: 3.5rem;
+    backface-visibility: hidden;
+    animation: moveInTop 1s ease-out; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* it's shiffted from it's own initial position*/
+    text-align: center;
+    /*to align text like the button which is a inline-block*/ }
 
 /* --------title---------- */
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 7rem; }
-
-.heading-primary--main {
-  display: block;
-  /* Pour avoir un retour à la ligne */
-  font-size: 6rem;
-  font-weight: 4rem;
-  letter-spacing: 3.5rem;
-  margin-right: -3.5rem;
-  /*to remove the extra space added after the text*/
-  animation: moveInLeft 2s ease-in-out; }
-
-.heading-primary--sub {
-  display: block;
-  /* Pour avoir un retour à la ligne */
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  margin-right: -1.75rem;
-  /*to remove the extra space added after the text*/
-  animation: moveInRight 1s ease-in-out; }
+  .heading-primary--main {
+    display: block;
+    /* Pour avoir un retour à la ligne */
+    font-size: 6rem;
+    font-weight: 4rem;
+    letter-spacing: 3.5rem;
+    margin-right: -3.5rem;
+    /*to remove the extra space added after the text*/
+    animation: moveInLeft 2s ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    /* Pour avoir un retour à la ligne */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    margin-right: -1.75rem;
+    /*to remove the extra space added after the text*/
+    animation: moveInRight 1s ease-in-out; }
 
 /* title animations */
 @keyframes moveInLeft {
@@ -113,59 +108,53 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  /* to avoid spreading out on elements around* always use when using height width or padding to an element*/
-  /* also when using inline-block it's treated like text so you can use text-align on the parent element to center it */
-  border-radius: 10rem;
-  transition: all 0.2s;
-  position: relative;
-  font-weight: 700;
-  font-size: 1.4rem; }
-
-.btn--animated {
-  animation: moveInBottom 1s ease-out 0.75s;
-  animation-fill-mode: backwards;
-  /* the animation styles will be applied before the animation starts here the button was displayed before the animation actually started */ }
-
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-  /* offstet x direction, offset y direction , blur, color */ }
-
-.btn:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transform: translateY(-1px);
-  /*goes down when it's clicked*/ }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-/*----- spreading effect------- */
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  /* everything  has to be exactly the same as the initial button */
-  position: absolute;
-  /*initial btn is positionned relative */
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-color: #fff;
-  transition: all 0.4s; }
-
-/* .btn-white::after {
-  background-color: #fff;
-} */
-.btn:hover::after {
-  /*appears after, only when button is on hover state*/
-  transform: scaleX(1.5) scaleY(1.4);
-  opacity: 0; }
+.btn {
+  /*----- spreading effect------- */
+  /* &-white::after {
+    background-color: $color-white;
+  } */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    /* to avoid spreading out on elements around* always use when using height width or padding to an element*/
+    /* also when using inline-block it's treated like text so you can use text-align on the parent element to center it */
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.4rem; }
+  .btn--animated {
+    animation: moveInBottom 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    /* the animation styles will be applied before the animation starts here the button was displayed before the animation actually started */ }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem #000000cc;
+    /* offstet x direction, offset y direction , blur, color */ }
+  .btn:active {
+    box-shadow: 0 0.5rem 1rem #000000cc;
+    transform: translateY(-1px);
+    /*goes down when it's clicked*/ }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    /* everything  has to be exactly the same as the initial button */
+    position: absolute;
+    /*initial btn is positionned relative */
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+    transition: all 0.4s; }
+  .btn:hover::after {
+    /*appears after, only when button is on hover state*/
+    transform: scaleX(1.5) scaleY(1.4);
+    opacity: 0; }
