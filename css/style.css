@@ -1,73 +1,4 @@
 @charset "UTF-8";
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  box-sizing: border-box;
-  font-family: "lato", sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #28b485; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
-  /* you define the coordinates inside the parenthesis to crop try in the console*/
-  /* https://bennettfeely.com/clippy/ */
-  /* whatever the vp size the image stays on top of the container*/
-  position: relative;
-  /*to make the logo-box  position according to the header*/ }
-  .header__logo-box {
-    position: absolute;
-    top: 5.5rem;
-    left: 5rem; }
-  .header__logo {
-    height: 3.5rem;
-    backface-visibility: hidden;
-    animation: moveInTop 1s ease-out; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* it's shiffted from it's own initial position*/
-    text-align: center;
-    /*to align text like the button which is a inline-block*/ }
-
-/* --------title---------- */
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 7rem; }
-  .heading-primary--main {
-    display: block;
-    /* Pour avoir un retour à la ligne */
-    font-size: 6rem;
-    font-weight: 4rem;
-    letter-spacing: 3.5rem;
-    margin-right: -3.5rem;
-    /*to remove the extra space added after the text*/
-    animation: moveInLeft 2s ease-in-out; }
-  .heading-primary--sub {
-    display: block;
-    /* Pour avoir un retour à la ligne */
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    margin-right: -1.75rem;
-    /*to remove the extra space added after the text*/
-    animation: moveInRight 1s ease-in-out; }
-
 /* title animations */
 @keyframes moveInLeft {
   0% {
@@ -107,6 +38,47 @@ body {
   to {
     opacity: 1;
     transform: translateY(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #28b485; }
+
+/* --------title---------- */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 7rem; }
+  .heading-primary--main {
+    display: block;
+    /* Pour avoir un retour à la ligne */
+    font-size: 6rem;
+    font-weight: 4rem;
+    letter-spacing: 3.5rem;
+    margin-right: -3.5rem;
+    /*to remove the extra space added after the text*/
+    animation: moveInLeft 2s ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    /* Pour avoir un retour à la ligne */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    margin-right: -1.75rem;
+    /*to remove the extra space added after the text*/
+    animation: moveInRight 1s ease-in-out; }
 
 .btn {
   /*----- spreading effect------- */ }
@@ -157,3 +129,31 @@ body {
     z-index: -1;
     background-color: #fff;
     transition: all 0.4s; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  /* you define the coordinates inside the parenthesis to crop try in the console*/
+  /* https://bennettfeely.com/clippy/ */
+  /* whatever the vp size the image stays on top of the container*/
+  position: relative;
+  /*to make the logo-box  position according to the header*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 5.5rem;
+    left: 5rem; }
+  .header__logo {
+    height: 3.5rem;
+    backface-visibility: hidden;
+    animation: moveInTop 1s ease-out; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* it's shiffted from it's own initial position*/
+    text-align: center;
+    /*to align text like the button which is a inline-block*/ }

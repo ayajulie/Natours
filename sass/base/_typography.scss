@@ -1,0 +1,30 @@
+body {
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-primary-dark;
+}
+
+/* --------title---------- */
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 7rem;
+  &--main {
+    display: block; /* Pour avoir un retour à la ligne */
+    font-size: 6rem;
+    font-weight: 4rem;
+    letter-spacing: 3.5rem;
+    margin-right: -3.5rem; /*to remove the extra space added after the text*/
+    animation: moveInLeft 2s ease-in-out;
+  }
+  &--sub {
+    display: block; /* Pour avoir un retour à la ligne */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    margin-right: -1.75rem; /*to remove the extra space added after the text*/
+    animation: moveInRight 1s ease-in-out;
+  }
+}

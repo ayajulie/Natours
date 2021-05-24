@@ -1,0 +1,38 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  /* you define the coordinates inside the parenthesis to crop try in the console*/
+  /* https://bennettfeely.com/clippy/ */
+  /* whatever the vp size the image stays on top of the container*/
+  position: relative; /*to make the logo-box  position according to the header*/
+
+  &__logo-box {
+    //header__logo-box
+    position: absolute;
+    top: 5.5rem;
+    left: 5rem;
+  }
+  &__logo {
+    height: 3.5rem;
+    backface-visibility: hidden;
+    animation: moveInTop 1s ease-out;
+  }
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(
+      -50%,
+      -50%
+    ); /* it's shiffted from it's own initial position*/
+    text-align: center; /*to align text like the button which is a inline-block*/
+  }
+}
