@@ -109,10 +109,7 @@ body {
     transform: translateY(0); } }
 
 .btn {
-  /*----- spreading effect------- */
-  /* &-white::after {
-    background-color: $color-white;
-  } */ }
+  /*----- spreading effect------- */ }
   .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -133,6 +130,10 @@ body {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem #000000cc;
     /* offstet x direction, offset y direction , blur, color */ }
+    .btn:hover::after {
+      /*appears after, only when button is on hover state*/
+      transform: scaleX(1.5) scaleY(1.4);
+      opacity: 0; }
   .btn:active {
     box-shadow: 0 0.5rem 1rem #000000cc;
     transform: translateY(-1px);
@@ -140,6 +141,8 @@ body {
   .btn--white {
     background-color: #fff;
     color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
   .btn::after {
     content: "";
     display: inline-block;
@@ -154,7 +157,3 @@ body {
     z-index: -1;
     background-color: #fff;
     transition: all 0.4s; }
-  .btn:hover::after {
-    /*appears after, only when button is on hover state*/
-    transform: scaleX(1.5) scaleY(1.4);
-    opacity: 0; }

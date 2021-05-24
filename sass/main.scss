@@ -163,6 +163,12 @@ body {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem $color-black;
     /* offstet x direction, offset y direction , blur, color */
+
+    &::after {
+      /*appears after, only when button is on hover state*/
+      transform: scaleX(1.5) scaleY(1.4);
+      opacity: 0;
+    }
   }
   &:active {
     box-shadow: 0 0.5rem 1rem $color-black;
@@ -171,8 +177,11 @@ body {
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+    &::after {
+      background-color: $color-white;
+      //this code is actually useless
+    }
   }
-
   /*----- spreading effect------- */
   &::after {
     content: "";
@@ -187,13 +196,5 @@ body {
     z-index: -1;
     background-color: $color-white;
     transition: all 0.4s;
-  }
-  /* &-white::after {
-    background-color: $color-white;
-  } */
-  &:hover::after {
-    /*appears after, only when button is on hover state*/
-    transform: scaleX(1.5) scaleY(1.4);
-    opacity: 0;
   }
 }
